@@ -1,0 +1,10 @@
+Barbarossa Lounge,714 Montgomery St,San Francisco,CA,94111,37.795871,-122.403101
+Huxley,846 Geary St,San Francisco,CA,94109,37.786395,-122.417245
+The Hidden Vine,408 Merchant St,San Francisco,CA,94111,37.795560,-122.400799
+Etcetera Wine Bar,795 Valencia St,San Francisco,CA,94110,37.760255,-122.421321
+High Treason,443 Clement Street,San Francisco,CA,94118,37.782729,-122.464072
+Resolute,678 Geary St,San Francisco,CA,94102,37.786825,-122.414383
+Eno Wine Bar,320 Geary St,San Francisco,CA,94102,37.787330,-122.408784
+L'emigrante Wine Bar & Bistro,2199 Mission St,San Francisco,CA,94110,37.762034,-122.419108
+Inner Fog,545 Irving St,San Francisco,CA,94122,37.763986,-122.463857
+Fig & Thistle,313 Ivy St,San Francisco,CA,94102,37.777230,-122.423346

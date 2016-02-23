@@ -1,0 +1,36 @@
+2015,Dutton Goldfield,Pinot Noir
+2015,Gary Farrell,Pinot Noir
+2015,Hanzell,Pinot Noir
+2015,William Seylem,Pinot Noir
+2015,Sojourn Cellars,Pinot Noir
+2015,Rochioli,Pinot Noir
+2015,Talisman,Pinot Noir
+2015,Dehlinger,Pinot Noir
+2015,La Follett,Pinot Noir
+2015,MacPhail,Pinot Noir
+2015,Merry Edwards,Pinot Noir
+2015,Papapietro Perry,Pinot Noir
+2015,Red Car,Pinot Noir
+2015,Schug,Pinot Noir
+2015,Loxton,Syrah
+2015,Preston,Syrah
+2015,Pride Mountain Vineyards,Syrah
+2015,Ramey,Syrah
+2015,Wind Gap,Syrah
+2015,Gloria Ferrer,Sparkling
+2015,Iron Horse,Sparkling
+2015,J Vineyards & Winery,Sparkling
+2015,Bevan,Sauvignon Blanc
+2015,Gardener,Sauvignon Blanc
+2015,Hanna,Sauvignon Blanc
+2015,Mauritian,Sauvignon Blanc
+2015,Rochioli,Sauvignon Blanc
+2015,Rued,Sauvignon Blanc
+2015,Pride Mountain Vineyards,Merlot
+2015,Martarona Family Winery,Merlot
+2015,LaFollette,Chardonnay
+2015,Dutton Goldfield,Chardonnay
+2015,Hanzell,Chardonnay
+2015,Ramey,Chardonnay
+2015,Williams Seylem,Chardonnay
+2015,Sojourn Cellars,Chardonnay

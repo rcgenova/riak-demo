@@ -1,0 +1,83 @@
+from riak.riak_error import RiakError
+from riak.client import RiakClient
+import sys
+import time
+import random
+
+client = RiakClient(host=sys.argv[1], pb_port=8087)
+
+bucket_type_default = client.bucket_type("bucket_type_default")
+bucket_type_map = client.bucket_type("bucket_type_map")
+
+user_bucket = bucket_type_default.bucket('user2')
+wine_bucket = bucket_type_default.bucket('wine2')
+location_bucket = bucket_type_default.bucket('location2')
+
+friends_bucket = bucket_type_map.bucket('friends')
+
+def create_users():
+
+    with open("users.txt") as f:
+
+        users = f.read().splitlines()
+	users = set(users) # remove dupes
+
+	# Add user
+        for user in users:
+	    user = user.strip()
+            record = user_bucket.new(user, data={})
+            print "User " + user + " added... " + str(record.store())
+
+	    # Add 10 random friends
+	    for i in range(10):
+		friend = users[random.randint(0, len(users) - 1)].strip()
+		if friend != user:
+
+    		    friends_list = Map(friends_bucket, user)
+    		    friends_list.sets['friends'].add(friend)
+    		    print "Friend " + friend + " added to user " + user + "... " + str(friends_list.store(return_body=False))
+
+def create_locations():
+
+    with open("locations.txt") as f:
+
+        field_names = ['name', 'street', 'city', 'state', 'zip', 'lat', 'long']
+    
+        for i, line in enumerate(f):
+	    field_values = line.split(',')
+	    field_values[6] = field_values[6].strip()
+	
+	    object = dict(zip(field_names, field_values))
+	    key = field_values[0].replace(" ", "_")
+	    print key, object
+
+	    record = location_bucket.new(key, data=object)
+	    print record.store()
+
+def create_wines():
+
+    with  open("wines.txt") as f:
+
+        field_names = ['year', 'producer', 'style']
+
+        for i, line in enumerate(f):
+	    field_values = line.split(',')
+	    field_values[2] = field_values[2].strip()
+	
+	    object = dict(zip(field_names, field_values))
+	    key = '_'.join(field_values).replace(" ", "")
+	
+	    print key, object
+
+	    record = wine_bucket.new(key, data=object)
+	    print record.store()
+
+if __name__ == "__main__":
+
+    print "\n"
+    create_users()
+    print "\n"
+    # create_locations()
+    # print "\n"
+    # create_wines()
+    # print "\n"
