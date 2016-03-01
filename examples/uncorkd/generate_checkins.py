@@ -3,15 +3,8 @@ import sys
 import time
 import datetime
 import random
+
 from checkin import Checkin
-
-client = RiakClient(host=sys.argv[1], pb_port=8087)
-bucket_type_default = client.bucket_type('bucket_type_default')
-location_bucket = bucket_type_default.bucket('location2')
-
-checkin_probability = [60, 55, 25, 0, 0, 0, 0, 0, 0, 0, 0, 20, 40, 30, 25, 15, 15, 45, 60, 70, 80, 75, 65, 60]
-rating_comment = ["", "Lousy", "Ok", "Decent", "Pretty good", "Wow!"]
-
 checkin = Checkin(sys.argv[1], sys.argv[2], sys.argv[3])
 
 f = open("users.txt")
@@ -31,7 +24,7 @@ locations = f.read().splitlines()
 location_count = len(locations)
 f.close()
 
-# Insert 30 days worth of checkins, starting on 2016-01-01 00:00:00
+# Insert 31 days worth of checkins, starting on 2016-01-01 00:00:00
 # 'checkin_probability' above used to weight the daily distribution on an hourly basis
 for t in range(1451606400000, 1454198400000, 60000):
     hour = int(time.strftime('%H', time.gmtime(t / 1000)))

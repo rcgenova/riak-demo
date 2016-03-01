@@ -44,11 +44,11 @@ class Checkin:
         print "Activities stored: ", str(ts_object.store())
 
         # Update location daily counter
-        counter = time.strftime('%Y-%m-%d', time.gmtime(timestamp))
+        counter = time.strftime('%Y-%m-%d', time.gmtime(timestamp / 1000))
         self.update_stats(location, counter)
 
         # Update location monthly counter
-        counter = time.strftime('%Y-%m', time.gmtime(timestamp))
+        counter = time.strftime('%Y-%m', time.gmtime(timestamp / 1000))
         self.update_stats(location, counter)
 
     def update_stats(self, key, counter):

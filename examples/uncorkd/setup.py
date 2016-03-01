@@ -71,11 +71,11 @@ def create_wines(wine_bucket):
 if __name__ == "__main__":
 
     print "\n"
-    # create_users(bucket_type_default.bucket('user2'), bucket_type_map.bucket('friends'))
-    # print "\n"
-    # create_locations(bucket_type_default.bucket('location2'))
-    # print "\n"
-    create_wines(bucket_type_default.bucket('wine2'))
+    create_users(bucket_type_default.bucket('user'), bucket_type_map.bucket('friends'))
+    print "\n"
+    create_locations(bucket_type_default.bucket('location'))
+    print "\n"
+    create_wines(bucket_type_default.bucket('wine'))
     print "\n"
 
 
