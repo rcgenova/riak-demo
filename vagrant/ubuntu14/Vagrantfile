@@ -16,6 +16,6 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "setup.sh"
 
-  config.vm.provision "file", source: "~/examples", destination: "/home/vagrant"
+  config.vm.provision "file", source: "../../examples", destination: "/home/vagrant"
 
 end
