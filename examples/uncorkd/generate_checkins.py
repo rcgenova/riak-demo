@@ -7,6 +7,13 @@ import random
 from checkin import Checkin
 checkin = Checkin(sys.argv[1], sys.argv[2], sys.argv[3])
 
+checkin_probability = [60, 55, 25, 0, 0, 0, 0, 0, 0, 0, 0, 20, 40, 30, 25, 15, 15, 45, 60, 70, 80, 75, 65, 60]
+rating_comment = ["", "Lousy", "Ok", "Decent", "Pretty good", "Wow!"]
+
+client = RiakClient(host=host, pb_port=8087)
+bucket_type_map = client.bucket_type("bucket_type_map")
+location_bucket = bucket_type_map.bucket('location_stats')
+
 f = open("users.txt")
 users = f.read().splitlines()
 user_set = set(users) # remove dupes
