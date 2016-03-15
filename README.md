@@ -1,5 +1,11 @@
-# riak-ts-demo
+# riak-demo
 
-Provisions Riak TS with Vagrant
-Provisions Riak TS in AWS
-Python code examples
+## Usage
+
+* Clone the repo
+* vagrant up
+* vagrant ssh
+
+## Examples
+
+* See the individual READMEs under the examples directory
