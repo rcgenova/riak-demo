@@ -24,7 +24,7 @@ class Checkin:
         rows=[]
         rows.append([1, wine, timestamp, location, location_lat, location_long, user, rating, comment])
         ts_object = checkin_table.new(rows)
-	print rows
+	# print rows
         print "Checkin stored: ", str(ts_object.store())
 
         # Update Activity feeds
